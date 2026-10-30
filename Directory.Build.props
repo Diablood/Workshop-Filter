@@ -1,4 +1,11 @@
 <Project>
+  <!--
+    Configuration MSBuild commune : .NET charge automatiquement ce fichier
+    pour les projets .csproj situés sous ce dossier, y compris les tests.
+    Sa place à la racine et son nom permettent cette découverte automatique.
+    Version définit le numéro du mod ; AssemblyVersion et FileVersion en
+    dérivent pour la DLL. About/About.xml et CHANGELOG.md doivent rester alignés.
+  -->
   <PropertyGroup>
     <Version>0.3.1</Version>
     <AssemblyVersion>$(Version).0</AssemblyVersion>

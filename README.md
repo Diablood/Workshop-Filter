@@ -39,9 +39,11 @@ Activer Harmony, puis Workshop Filter. Dans l’onglet des tâches d’un atelie
 
 ## Développement
 
+L’organisation des fichiers, le rôle de `Directory.Build.props` et les conventions de commit sont décrits dans [CONTRIBUTING.md](CONTRIBUTING.md). Tous les scripts sont regroupés dans `tools/`.
+
 La compilation cible .NET 10 et les assemblies de l’installation locale **1.7.4990 rev1069**. Les chemins du jeu et d’Harmony sont configurables :
 
-La version du mod suit `MAJEURE.MINEURE.CORRECTIF`, distinctement de la version du jeu. `Directory.Build.props` définit la version de la DLL ; `About/About.xml` et `CHANGELOG.md` doivent être mis à jour ensemble lors d’un changement de version. La compilation vérifie leur cohérence. Les premiers essais locaux n’avaient pas de version explicite ; la numérotation débute à 0.1.0.
+La version du mod suit `MAJEURE.MINEURE.CORRECTIF`, distinctement de la version du jeu. `Directory.Build.props` est une configuration .NET automatiquement chargée depuis la racine par les projets du mod et des tests ; il centralise la version et les numéros de la DLL. Ce fichier ne s’exécute pas. `About/About.xml` et `CHANGELOG.md` doivent être mis à jour avec lui lors d’un changement de version. La compilation vérifie leur cohérence. Les premiers essais locaux n’avaient pas de version explicite ; la numérotation débute à 0.1.0.
 
 ```powershell
 ./tools/build.ps1 -RimWorldDir 'D:\SteamLibrary\steamapps\common\RimWorld' -HarmonyAssemblyPath 'chemin\1.7\Assemblies\0Harmony.dll'

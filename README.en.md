@@ -33,6 +33,8 @@ User-reported in-game checks passed for 0.3.0. Automated checks cover filtering,
 
 ## Development and feedback
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the repository layout, shared MSBuild configuration and commit guidelines. `Directory.Build.props` stays at the repository root so .NET automatically imports the common version into the mod and test projects; it is configuration, not an executable script.
+
 Build requires .NET 10, a local RimWorld 1.7 installation and the installed Harmony assembly. All scripts live in `tools/`: `tools/build.ps1` builds and checks, `tools/deploy.cmd` installs a clean local copy, and `tools/prepare-release.ps1` prepares the distribution archive and Workshop content without uploading them. Scripts resolve project paths from their own location and work from other working directories. `LayoutChecks` runs only when explicitly requested.
 
 For a bug report, include the game/mod versions, affected workshop, selected filters, relevant interface mods, reproduction steps and a relevant log excerpt.
