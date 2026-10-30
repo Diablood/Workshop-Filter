@@ -85,6 +85,13 @@ if ((Get-Content -LiteralPath (Join-Path $root 'CHANGELOG.md') -Raw) -notmatch "
     throw 'Current version is missing from the changelog.'
 }
 Write-Output "Mod version verified: $version"
+$publishedIdPath = Join-Path $root 'About/PublishedFileId.txt'
+if (Test-Path -LiteralPath $publishedIdPath) {
+    $publishedId = (Get-Content -LiteralPath $publishedIdPath -Raw).Trim()
+    $listing = Get-Content -LiteralPath (Join-Path $root 'workshop/listing.json') -Raw | ConvertFrom-Json
+    if ($publishedId -notmatch '^\d+$' -or $publishedId -ne $listing.publishedFileId) { throw 'Workshop item identity mismatch.' }
+    Write-Output "Workshop item identity verified: $publishedId"
+}
 if ($about.ModMetaData.supportedVersions.li -ne '1.7' -or $null -eq $folders.loadFolders.'v1.7') { throw 'Invalid target game version.' }
 if (@($about.ModMetaData.modDependencies.li | Where-Object packageId -eq 'dubwise.dubsmintmenus').Count) {
     throw 'Dubs Mint Menus must not be a required mod dependency.'

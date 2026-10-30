@@ -1,0 +1,78 @@
+{
+  "version": "0.3.1",
+  "author": "Diablood",
+  "packageId": "diablood.workshopfilter",
+  "publishedFileId": "3830142536",
+  "verifiedUtc": "2026-10-30T14:04:36.9987913Z",
+  "visibility": "private",
+  "files": [
+    {
+      "path": "About/About.xml",
+      "bytes": 723,
+      "sha256": "97EBCEE79A698CF0FE66E8B21E0859AD4B9A4DB940ABDE1AAC1E6F4CF56EF671"
+    },
+    {
+      "path": "About/ModIcon.png",
+      "bytes": 6687,
+      "sha256": "B16285D5A55DE0E2CA5C8BFF42D51F1E7C33BD87A44C97A83D65142FF885A98F"
+    },
+    {
+      "path": "About/Preview.png",
+      "bytes": 696254,
+      "sha256": "C9AC1CF992970AE553F353B9AC7067528C496CB647DC73E054149B10854555E8"
+    },
+    {
+      "path": "LoadFolders.xml",
+      "bytes": 102,
+      "sha256": "31A52FAE84B77CCA04B3824817E773978224EA5826B83B306B4927B65B7188E2"
+    },
+    {
+      "path": "1.7/Assemblies/WorkshopFilter.dll",
+      "bytes": 35840,
+      "sha256": "B5E93BF3F41B07050170DC295BA130AFF23822BD1E98A63E72266B920C63559D"
+    },
+    {
+      "path": "Languages/English/Keyed/WorkshopFilter.xml",
+      "bytes": 1420,
+      "sha256": "01B7DA3A57092067DA71237507E781A3AB709177B9E4598CE85BDE3F31165DCC"
+    },
+    {
+      "path": "Languages/French/Keyed/WorkshopFilter.xml",
+      "bytes": 1597,
+      "sha256": "A3D359CB89EE1447FCBD86F22DE50AC902CEB4F831EBF8187EB63E04C9C0A897"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1065,
+      "sha256": "AF4DAAE2CA8D5721DDED03DC8E51E90A60AF641FC8CEC47FB3A667306E3C7967"
+    },
+    {
+      "path": "LICENSING.md",
+      "bytes": 916,
+      "sha256": "23ECE8C948191D1C2869737BBC53749444F2D087967E3C7D135B96193D4CAF9D"
+    },
+    {
+      "path": "README.md",
+      "bytes": 10856,
+      "sha256": "4422324591720A9D02AB094FED98F4992E18D93A6C532B88E4503E85C191FE2D"
+    },
+    {
+      "path": "README.en.md",
+      "bytes": 3441,
+      "sha256": "CBA115A428FE1A71D0EE6AC33BF7CC716803044FB240E4F940D52FC637320B01"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 5536,
+      "sha256": "77EE806B179B97CC38EF683410D5B137BA04602620C236D8ED72C572DE15ED48"
+    },
+    {
+      "path": "About/PublishedFileId.txt",
+      "bytes": 10,
+      "sha256": "AA11F33FE676AA6A4F38D46C2B978A1BD21D429AD104A45F494B6F75ECD7D021"
+    }
+  ],
+  "githubWorkshopMethodBodiesCompared": 175,
+  "githubWorkshopMethodBodiesIdentical": true,
+  "githubWorkshopBinaryHashesIdentical": false
+}

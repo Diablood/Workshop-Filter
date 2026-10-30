@@ -10,7 +10,11 @@ Le créateur a fermé le jeu pour permettre le redéploiement de 0.3.1. L’entr
 
 Historique GitHub : la [release v0.3.0](https://github.com/Diablood/Workshop-Filter/releases/tag/v0.3.0) reste conservée avec son ancien package ID. Son tag pointe vers `d48ba59cc46c00a27fda99d8944b7fa0fd53b1f4`. Sa vérification initiale portait sur 12 fichiers, SHA-256 `7c2404ba73349d1cd9f534ab4e34076173645f222f82e86bb4c8ba7f007c4988`. Utiliser désormais 0.3.1.
 
-Workshop : le créateur a choisi d’effectuer lui-même le premier envoi et de fournir le lien. Attendre ce lien pour renseigner l’identifiant et vérifier la page ; ne pas déclencher un deuxième envoi depuis l’agent. Les textes FR/EN sont prêts. L’icône personnelle `About/ModIcon.png` est conservée sans modification et incluse dans la distribution.
+Workshop : premier envoi effectué par le créateur, article [Workshop Filter](https://steamcommunity.com/sharedfiles/filedetails/?id=3830142536), identifiant **3830142536**. Visibilité **Masquée (privée)** vérifiée dans la session du propriétaire et explicitement maintenue à sa demande le 2026-10-30. Ne pas passer en public sans nouvelle instruction. Descriptions et notes FR/EN enregistrées ; Harmony déclaré comme seul élément requis, Dubs Mint Menus reste facultatif. L’icône personnelle `About/ModIcon.png` est conservée sans modification.
+
+Le téléchargement Workshop affiche la version 0.3.1, l’auteur Diablood et le package ID `diablood.workshopfilter`. Ses 12 fichiers de contenu correspondent à la copie locale utilisée pour l’envoi ; `About/PublishedFileId.txt` identifie le même article et est maintenant conservé dans les sources pour les prochaines mises à jour. Voir `verified-files-0.3.1.json`.
+
+La DLL envoyée a été recompilée par le créateur après le tag GitHub : sa version informative porte le suffixe Git `a66449bdd023fda072425309b1e569f8f46eefec`, tandis que l’archive GitHub initiale porte `e2dc37e5b42ad74e7f6ff3778b8c4817dc6a1b72`. La comparaison des 175 signatures et corps de méthodes IL confirme leur identité. Les SHA-256 binaires diffèrent ; la release GitHub et son tag existants ne sont pas réécrits. Le dépôt conserve la DLL effectivement téléchargée du Workshop.
 
 ## Contenu de publication
 
