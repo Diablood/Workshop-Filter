@@ -135,7 +135,8 @@ internal static class BillListingPatch
     private static void Prefix(BillStack __instance, ref Func<List<FloatMenuOption>> recipeOptionsMaker)
     {
         DubsMintMenusCompatibility.BeginListing();
-        if (__instance.billGiver is not Thing table) return;
+        // Pawns also own BillStacks for surgery. Only buildings expose product filters.
+        if (__instance.billGiver is not Building table) return;
         var state = FilterContext.States.GetValue(__instance, _ => new FilterState());
         var original = recipeOptionsMaker;
         recipeOptionsMaker = () => FilterContext.MakeOptions(table.def, state, original);
@@ -144,7 +145,7 @@ internal static class BillListingPatch
     private static void Postfix(BillStack __instance, Rect rect)
     {
         if (!layoutReady || DubsMintMenusCompatibility.HasPanel(__instance)
-            || __instance.billGiver is not Thing table || __instance.Count >= BillStack.MaxCount) return;
+            || __instance.billGiver is not Building table || __instance.Count >= BillStack.MaxCount) return;
         var state = FilterContext.States.GetValue(__instance, _ => new FilterState());
         var button = new Rect(rect.x, rect.y + 35f, Mathf.Min(200f, rect.width), 29f);
         if (button.width < 70f) return;
@@ -154,7 +155,8 @@ internal static class BillListingPatch
     }
 
     private static float HeaderHeight(BillStack stack) =>
-        stack.Count < BillStack.MaxCount && !DubsMintMenusCompatibility.HasPanel(stack) ? 69f : 35f;
+        stack.billGiver is Building && stack.Count < BillStack.MaxCount
+            && !DubsMintMenusCompatibility.HasPanel(stack) ? 69f : 35f;
 
     private static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
     {

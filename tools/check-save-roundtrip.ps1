@@ -142,3 +142,41 @@ try {
     $database.GetMethod('Clear').Invoke($null, $null) | Out-Null
     $scribe.GetMethod('ForceStop').Invoke($null, $null) | Out-Null
 }
+
+# Exercise the real UI guards without executing GUI code or launching LayoutChecks.
+$listing = $mod.GetType('WorkshopFilter.BillListingPatch', $true)
+$prefix = $listing.GetMethod('Prefix', $flags)
+$postfix = $listing.GetMethod('Postfix', $flags)
+$header = $listing.GetMethod('HeaderHeight', $flags)
+$listing.GetField('layoutReady', $flags).SetValue($null, $true)
+$optionList = [Collections.Generic.List``1].MakeGenericType($game.GetType('Verse.FloatMenuOption', $true))
+$makerType = [Func``1].MakeGenericType($optionList)
+$method = [Reflection.Emit.DynamicMethod]::new('EmptyRecipeOptions', $optionList, [type[]]@())
+$il = $method.GetILGenerator()
+$il.Emit([Reflection.Emit.OpCodes]::Ldnull)
+$il.Emit([Reflection.Emit.OpCodes]::Ret)
+$maker = $method.CreateDelegate($makerType)
+$rectType = $postfix.GetParameters()[1].ParameterType
+$rect = [Activator]::CreateInstance($rectType)
+$scopeChecksBefore = $script:checks
+foreach ($giverName in @('Verse.Pawn', 'RimWorld.Building_WorkTable')) {
+    $giver = [Runtime.CompilerServices.RuntimeHelpers]::GetUninitializedObject($game.GetType($giverName, $true))
+    $stack = [Activator]::CreateInstance($stackType, [object[]]@($giver))
+    $arguments = [object[]]@($stack, $maker)
+    $prefix.Invoke($null, $arguments) | Out-Null
+    $medical = $giverName -eq 'Verse.Pawn'
+    Assert-Check ([object]::ReferenceEquals($arguments[1], $maker) -eq $medical) "$giverName recipe delegate scope failed."
+    Assert-Check (($null -eq (Read-State $stack)) -eq $medical) "$giverName filter state scope failed."
+    $expectedHeight = if ($medical) { 35.0 } else { 69.0 }
+    Assert-Check ($header.Invoke($null, @($stack)) -eq $expectedHeight) "$giverName header height failed."
+    if ($medical) {
+        # Old saves may already contain a medical filter: it must remain inert.
+        $states.Add($stack, (New-State 'workshopfilter.testfixture' $null $true))
+        $arguments[1] = $maker
+        $prefix.Invoke($null, $arguments) | Out-Null
+        Assert-Check ([object]::ReferenceEquals($arguments[1], $maker)) 'Legacy medical filter changed surgery options.'
+        $postfix.Invoke($null, @($stack, $rect)) | Out-Null
+        Assert-Check ($header.Invoke($null, @($stack)) -eq 35.0) 'Legacy medical filter added a header row.'
+    }
+}
+Write-Output "$($script:checks - $scopeChecksBefore) workshop/medical scope checks passed. No game UI was executed."

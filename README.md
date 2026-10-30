@@ -1,6 +1,6 @@
 # Workshop Filter — RimWorld 1.7
 
-Version **0.3.1**. Ajoute **Filtrer les produits** sur une ligne dédiée sous les commandes d’ajout de tâche dans les ateliers. Historique : [CHANGELOG.md](CHANGELOG.md).
+Version **0.3.2**. Ajoute **Filtrer les produits** sur une ligne dédiée sous les commandes d’ajout de tâche dans les ateliers. Les opérations médicales des colons ne sont pas filtrées et conservent leur disposition habituelle. Historique : [CHANGELOG.md](CHANGELOG.md).
 
 Dépôt GitHub du projet : [Diablood/Workshop-Filter](https://github.com/Diablood/Workshop-Filter).
 
@@ -63,7 +63,7 @@ Compatibilité prévue avec les autres ateliers moddés utilisant `BillStack.DoL
 
 `tools/build.ps1` compile le mod et exécute 33 contrôles de logique (filtres des produits et recherche textuelle), ainsi que les contrôles de signatures, XML, traductions et versions. Le déploiement habituel ne compile ni ne lance `LayoutChecks` : son lancement déclenche une analyse antivirus audible sur cette machine.
 
-`./tools/check-save-roundtrip.ps1` effectue séparément 9 contrôles de sauvegarde/rechargement avec le sérialiseur Scribe du jeu installé, depuis PowerShell sans créer ni lancer d’exécutable de test. Les fichiers XML synthétiques sont écrits dans `artifacts/save-check`, sans toucher aux parties ni à la configuration du joueur. Ces contrôles ont réussi pour 0.3.0 ; ils ne remplacent pas un test de partie complète en jeu.
+`./tools/check-save-roundtrip.ps1` effectue séparément 9 contrôles de sauvegarde/rechargement avec le sérialiseur Scribe du jeu installé et 8 contrôles de séparation entre ateliers et opérations médicales, y compris un ancien filtre médical sauvegardé. Il s’exécute depuis PowerShell sans créer ni lancer d’exécutable de test. Les fichiers XML synthétiques sont écrits dans `artifacts/save-check`, sans toucher aux parties ni à la configuration du joueur. Ces contrôles ne remplacent pas un test de partie complète en jeu.
 
 Les 9 contrôles supplémentaires de mise en page et de chargement sans Dubs restent disponibles uniquement sur demande explicite avec `./tools/build.ps1 -RunLayoutChecks`. Ils vérifient la transformation des deux décalages du panneau natif sur l’assembly du jeu installé, l’espace réservé au filtre et son retrait lorsque Dubs dessine son panneau. Aucun rendu du jeu n’est exécuté : cela ne remplace pas une vérification visuelle en jeu.
 
@@ -76,6 +76,7 @@ Parcours manuel :
 5. Sur un autre atelier, vérifier le filtrage par mod et l’indépendance des sélections ; réinitialiser une liste vide.
 6. Vérifier les recettes non recherchées et les styles idéologiques ; ajouter une tâche, fermer et rouvrir son onglet.
 7. Choisir des filtres différents sur deux ateliers, sauvegarder et recharger : les tâches et les sélections de filtres doivent rester identiques. Charger aussi une sauvegarde faite avant 0.3.0 : aucun filtre ne doit être actif par défaut.
+8. Ouvrir Santé → Opérations sur un colon : aucun bouton de filtre ni espace supplémentaire ; la liste des opérations reste complète, même après avoir filtré un atelier. Vérifier avec et sans Dubs Mint Menus.
 
 Vérification Dubs : sélectionner un filtre dans l’onglet d’un atelier et confirmer que le panneau Dubs se réduit ; tester sa recherche, une sélection sans résultat et la réinitialisation. Dans la fenêtre globale Dubs, sélectionner plusieurs ateliers et changer un filtre. Tester également avec Dubs désactivé. Vérifier que les modèles de tâches restent disponibles et applicables indépendamment du filtre.
 

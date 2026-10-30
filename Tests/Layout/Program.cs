@@ -1,5 +1,6 @@
 using System.Reflection;
 using System.Reflection.Emit;
+using System.Runtime.CompilerServices;
 using HarmonyLib;
 using RimWorld;
 using WorkshopFilter;
@@ -17,7 +18,7 @@ var transformed = ((IEnumerable<CodeInstruction>)transpiler.Invoke(null, [origin
 Check(transformed.Count(c => c.opcode == OpCodes.Call && Equals(c.operand, header)) == 2, "Both viewport offsets must be adjusted");
 Check(!transformed.Any(c => c.opcode == OpCodes.Ldc_R4 && c.operand is float f && f == 35f), "No old viewport offset remains");
 Check((bool)patch.GetField("layoutReady", flags)!.GetValue(null)!, "Layout must be enabled on installed game");
-var stack = new BillStack(null!);
+var stack = new BillStack((Building_WorkTable)RuntimeHelpers.GetUninitializedObject(typeof(Building_WorkTable)));
 Check((float)header.Invoke(null, [stack])! == 69f, "Vanilla filter gets its own row");
 compatibility.GetField("renderedPanels", flags)!.SetValue(null, new HashSet<BillStack> { stack });
 Check((float)header.Invoke(null, [stack])! == 35f, "Dubs panel suppresses extra native row");

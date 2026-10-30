@@ -7,7 +7,7 @@
     dérivent pour la DLL. About/About.xml et CHANGELOG.md doivent rester alignés.
   -->
   <PropertyGroup>
-    <Version>0.3.1</Version>
+    <Version>0.3.2</Version>
     <AssemblyVersion>$(Version).0</AssemblyVersion>
     <FileVersion>$(Version).0</FileVersion>
   </PropertyGroup>

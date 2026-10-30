@@ -41,7 +41,7 @@ Le lanceur `tools/deploy.cmd` trouve PowerShell 7 et autorise les scripts pour s
 
 Les scripts déduisent la racine du dépôt depuis leur propre emplacement : un appel par chemin absolu fonctionne aussi depuis un autre répertoire de travail. Les chemins du jeu et d’Harmony restent configurables avec `-RimWorldDir` et `-HarmonyAssemblyPath`.
 
-Le build habituel ne lance pas `LayoutChecks`. Le contrôle de sauvegarde `tools/check-save-roundtrip.ps1` s’exécute séparément sur des fichiers synthétiques, sans toucher aux parties du joueur.
+Le build habituel ne lance pas `LayoutChecks`. Le contrôle `tools/check-save-roundtrip.ps1` s’exécute séparément sur des fichiers synthétiques, sans toucher aux parties du joueur. Il vérifie aussi que les filtres restent limités aux bâtiments et n’affectent pas les opérations médicales, sans exécuter l’interface du jeu.
 
 ## Commits lisibles
 

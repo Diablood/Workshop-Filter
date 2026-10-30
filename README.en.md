@@ -2,7 +2,9 @@
 
 [Français](README.md) · [Source](https://github.com/Diablood/Workshop-Filter)
 
-**Version 0.3.1 — RimWorld 1.7**
+**Version 0.3.2 — RimWorld 1.7**
+
+Product filters apply to workshop buildings only. Colonists’ medical operations keep their original recipe list and layout, without a filter button or extra header row.
 
 Author: **Diablood**. Package ID: `diablood.workshopfilter` (formerly `diabl.workshopfilter` before 0.3.1). The local deployment script accepts the old identity and preserves any existing Workshop item ID. Ensure the new package ID is active after updating. Filter save types and keys are unchanged.
 

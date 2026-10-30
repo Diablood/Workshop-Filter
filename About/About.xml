@@ -3,7 +3,7 @@
   <name>Workshop Filter</name>
   <author>Diablood</author>
   <packageId>diablood.workshopfilter</packageId>
-  <modVersion>0.3.1</modVersion>
+  <modVersion>0.3.2</modVersion>
   <url>https://github.com/Diablood/Workshop-Filter</url>
   <supportedVersions><li>1.7</li></supportedVersions>
   <modDependencies>
