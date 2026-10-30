@@ -2,6 +2,12 @@
 
 Publication GitHub et Workshop demandée par le créateur le 2026-10-30. Licence MIT choisie pour le code ; couverture cartoon demandée. La version 0.3.0 a reçu un retour utilisateur « Tests OK ». Les scénarios détaillés ne sont pas connus ; les vérifications automatiques sont décrites dans le README principal.
 
+## État de publication
+
+GitHub : sources et [release v0.3.0](https://github.com/Diablood/Workshop-Filter/releases/tag/v0.3.0) publiées. Le tag pointe vers `d48ba59cc46c00a27fda99d8944b7fa0fd53b1f4`, avec l’auteur **Diablood**. L’archive publique a été retéléchargée et ses 12 fichiers vérifiés contre le manifeste. SHA-256 : `7c2404ba73349d1cd9f534ab4e34076173645f222f82e86bb4c8ba7f007c4988`.
+
+Workshop : le créateur a choisi d’effectuer lui-même le premier envoi et de fournir le lien. Attendre ce lien pour renseigner l’identifiant et vérifier la page ; ne pas déclencher un deuxième envoi depuis l’agent. Les textes FR/EN sont prêts. L’icône personnelle `About/ModIcon.png` est conservée sans modification et incluse dans la distribution.
+
 ## Contenu de publication
 
 - Couverture : `About/Preview.png`, export carré du master `workshop/assets/preview-master-cartoon.png`. Illustration promotionnelle, pas une capture du jeu.
