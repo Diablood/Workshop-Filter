@@ -72,6 +72,9 @@ try {
 } finally { $context.Dispose() }
 [xml]$about = Get-Content -LiteralPath (Join-Path $root 'About/About.xml') -Raw
 [xml]$folders = Get-Content -LiteralPath (Join-Path $root 'LoadFolders.xml') -Raw
+if ($about.ModMetaData.packageId -ne 'diablood.workshopfilter' -or $about.ModMetaData.author -ne 'Diablood') {
+    throw 'Package identity and author must use Diablood.'
+}
 [xml]$versionProps = Get-Content -LiteralPath (Join-Path $root 'Directory.Build.props') -Raw
 $version = [string]$versionProps.Project.PropertyGroup.Version
 if ($version -notmatch '^\d+\.\d+\.\d+$' -or $about.ModMetaData.modVersion -ne $version -or

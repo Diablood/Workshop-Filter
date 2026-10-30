@@ -24,6 +24,8 @@ Works with the native Add bill menu and the recipe panels of Dubs Mint Menus, in
 [h2]Requirements and compatibility[/h2]
 RimWorld 1.7 and Harmony are required. Core and DLC are shown as separate product sources. No DLC is required by Workshop Filter itself.
 
+When updating from 0.3.0, enable Workshop Filter again if RimWorld requests it: 0.3.1 corrects its package identity to match the creator's name, Diablood.
+
 Other mods replacing the bill interface may need an adapter. Recipes that generate outputs only through a custom worker without declared recipe products cannot be classified. Filter choices affect only the displayed recipe list; they do not change crafting requirements, ingredient filters or existing bills.
 
 [h2]Saves and feedback[/h2]

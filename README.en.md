@@ -2,7 +2,9 @@
 
 [Français](README.md) · [Source](https://github.com/Diablood/Workshop-Filter)
 
-**Version 0.3.0 — RimWorld 1.7**
+**Version 0.3.1 — RimWorld 1.7**
+
+Author: **Diablood**. Package ID: `diablood.workshopfilter` (formerly `diabl.workshopfilter` before 0.3.1). The local deployment script accepts the old identity and preserves any existing Workshop item ID. Ensure the new package ID is active after updating. Filter save types and keys are unchanged.
 
 Find the products you want to craft without scrolling through every recipe. Workshop Filter adds combinable filters to the workshop's Add bill menu and supports Dubs Mint Menus when installed.
 

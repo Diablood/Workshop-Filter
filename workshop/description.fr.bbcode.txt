@@ -24,6 +24,8 @@ Fonctionne avec le menu natif d'ajout de tâche et les panneaux de recettes de D
 [h2]Prérequis et compatibilité[/h2]
 RimWorld 1.7 et Harmony sont requis. Le jeu de base et les DLC sont proposés comme sources distinctes. Workshop Filter ne nécessite lui-même aucun DLC.
 
+Après une mise à jour depuis 0.3.0, réactivez Workshop Filter si RimWorld le demande : la 0.3.1 corrige son identifiant pour correspondre au nom du créateur, Diablood.
+
 Les autres mods remplaçant entièrement l'interface des tâches peuvent nécessiter une adaptation. Les recettes générant leurs produits uniquement par un worker custom, sans produits déclarés, ne peuvent pas être classées. Les filtres modifient seulement la liste affichée, pas les exigences de fabrication, les ingrédients ni les tâches existantes.
 
 [h2]Sauvegardes et retours[/h2]

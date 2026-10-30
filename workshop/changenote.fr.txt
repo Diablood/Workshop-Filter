@@ -1,2 +1,2 @@
-Première publication — Workshop Filter 0.3.0 pour RimWorld 1.7.
+Workshop Filter 0.3.1 pour RimWorld 1.7. Auteur : Diablood. Package ID corrigé en diablood.workshopfilter (anciennement diabl.workshopfilter). Types et clés de sauvegarde des filtres inchangés.
 Filtres des produits finaux par mod, couche de vêtement et compatibilité nudiste. Sélections sauvegardées par atelier, listes de mods/couches avec recherche, résumé des critères actifs et compatibilité facultative Dubs Mint Menus. Interface FR/EN. Harmony requis.

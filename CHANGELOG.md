@@ -1,5 +1,13 @@
 # Journal des changements
 
+## 0.3.1 — 2026-10-30
+
+- Correction de l’identité à la demande du créateur : auteur **Diablood**, package ID `diablood.workshopfilter` et identifiant Harmony aligné.
+- Le déploiement local accepte l’ancienne copie `diabl.workshopfilter` pour sa migration et préserve l’identifiant de l’article Workshop.
+- Les types sérialisés et clés des filtres restent identiques à 0.3.0 ; aucun changement de logique de filtrage.
+
+Validation : compilation sans erreur ni avertissement, 33 contrôles fonctionnels et 9 contrôles Scribe réussis, cohérence des métadonnées et signatures vérifiée. `LayoutChecks` n’a pas été lancé. La version 0.3.0 avait reçu une validation en jeu du créateur ; 0.3.1 corrige uniquement l’identité et les outils de déploiement associés.
+
 ## 0.3.0 — 2026-10-30
 
 - Les filtres sont désormais sauvegardés dans le `BillStack` de chaque atelier et restaurés au chargement. Les anciennes sauvegardes sans données de filtre démarrent sans restriction. Les critères de mod ou de couche disparus sont effacés au chargement.

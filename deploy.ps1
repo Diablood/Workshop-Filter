@@ -38,7 +38,7 @@ if (Test-Path -LiteralPath $destination) {
         throw 'Existing WorkshopFilter directory is not an identified mod. It will not be overwritten.'
     }
     [xml]$installed = Get-Content -LiteralPath $installedAbout -Raw
-    if ($installed.ModMetaData.packageId -ne 'diabl.workshopfilter') {
+    if ($installed.ModMetaData.packageId -notin @('diablood.workshopfilter', 'diabl.workshopfilter')) {
         throw 'Existing WorkshopFilter directory belongs to another mod. It will not be overwritten.'
     }
 }

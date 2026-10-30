@@ -25,7 +25,7 @@ compatibility.GetMethod("BeginListing", flags)!.Invoke(null, null);
 Check((float)header.Invoke(null, [stack])! == 69f, "Native row returns when Dubs does not draw");
 for (int i = 0; i < BillStack.MaxCount; i++) stack.Bills.Add(null!);
 Check((float)header.Invoke(null, [stack])! == 35f, "Full stack does not waste a filter row");
-var optionalHarmony = new Harmony("diabl.workshopfilter.layoutchecks");
+var optionalHarmony = new Harmony("diablood.workshopfilter.layoutchecks");
 compatibility.GetMethod("Install", flags)!.Invoke(null, [optionalHarmony]);
 Check(!optionalHarmony.GetPatchedMethods().Any(), "Absent Dubs must not install any optional patch");
 Console.WriteLine($"{checks} layout and optional-mod checks passed against the installed RimWorld assembly. No game UI was executed.");

@@ -11,7 +11,7 @@ public sealed class WorkshopFilterMod : Mod
 {
     public WorkshopFilterMod(ModContentPack content) : base(content)
     {
-        var harmony = new Harmony("diabl.workshopfilter");
+        var harmony = new Harmony("diablood.workshopfilter");
         harmony.PatchAll();
         Log.Message($"[Workshop Filter] v{typeof(WorkshopFilterMod).Assembly.GetName().Version} loaded.");
         LongEventHandler.ExecuteWhenFinished(() => DubsMintMenusCompatibility.Install(harmony));

@@ -1,10 +1,12 @@
 # Workshop Filter — RimWorld 1.7
 
-Version **0.3.0**. Ajoute **Filtrer les produits** sur une ligne dédiée sous les commandes d’ajout de tâche dans les ateliers. Historique : [CHANGELOG.md](CHANGELOG.md).
+Version **0.3.1**. Ajoute **Filtrer les produits** sur une ligne dédiée sous les commandes d’ajout de tâche dans les ateliers. Historique : [CHANGELOG.md](CHANGELOG.md).
 
 Dépôt GitHub du projet : [Diablood/Workshop-Filter](https://github.com/Diablood/Workshop-Filter).
 
 [English](README.en.md) · Code sous [licence MIT](LICENSE) ; visuels traités séparément dans [LICENSING.md](LICENSING.md).
+
+Auteur : **Diablood**. Identifiant du mod : `diablood.workshopfilter` depuis 0.3.1 (anciennement `diabl.workshopfilter`). Le déploiement local reconnaît l’ancienne copie et conserve l’identifiant de l’article Workshop lorsqu’il existe. Après mise à jour, vérifier que le nouvel identifiant est actif dans la liste de mods/RimSort. Les types C# et clés de sauvegarde des filtres n’ont pas changé.
 
 - **Par mod** : utilise le mod qui définit le produit final, y compris Core et les DLC comme entrées distinctes. Le mod de la recette n’est pas utilisé.
 - **Par couche de vêtement** : récupère les `ApparelLayerDef` des vêtements fabriqués dans cet atelier. Les couches vanilla et custom sont proposées automatiquement, avec leur mod d’origine.
