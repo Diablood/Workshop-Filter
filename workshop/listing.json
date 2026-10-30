@@ -5,10 +5,17 @@
   "appId": 294100,
   "packageId": "diablood.workshopfilter",
   "repository": "https://github.com/Diablood/Workshop-Filter",
-  "gitTag": "v0.3.1",
-  "requiredWorkshopItems": [2009463077],
-  "optionalWorkshopItems": [1446523594],
-  "gameGeneratedTags": ["Mod", "1.7"],
+  "gitTag": "v0.3.2",
+  "requiredWorkshopItems": [
+    2009463077
+  ],
+  "optionalWorkshopItems": [
+    1446523594
+  ],
+  "gameGeneratedTags": [
+    "Mod",
+    "1.7"
+  ],
   "publishedFileId": "3830142536",
   "workshopUrl": "https://steamcommunity.com/sharedfiles/filedetails/?id=3830142536",
   "status": "workshop-update-confirmed-by-author",
@@ -19,9 +26,16 @@
   "uploadConfirmationDate": "2026-10-30",
   "localDownloadedVersion": "0.3.1",
   "requiredItemsConfigured": true,
-  "githubReleaseUrl": "https://github.com/Diablood/Workshop-Filter/releases/tag/v0.3.1",
-  "githubReleaseCommit": "8f3857d5dfc66f3fd3fe0039388813a2ef658b9f",
+  "githubReleaseUrl": "https://github.com/Diablood/Workshop-Filter/releases/tag/v0.3.2",
+  "githubReleaseCommit": "1bbd4426522ce6d0a9daa5fd994084c49e348655",
   "githubArchiveVerified": true,
-  "localizedDescriptions": ["english", "french"],
-  "localizedChangenotes": ["english", "french"]
+  "localizedDescriptions": [
+    "english",
+    "french"
+  ],
+  "localizedChangenotes": [
+    "english",
+    "french"
+  ],
+  "githubArchiveSha256": "11a23ae2d71de154a492d1e19505b90be4dd3f1c7f4428cb7683193ca12b62e6"
 }

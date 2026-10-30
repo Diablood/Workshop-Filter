@@ -6,7 +6,9 @@ Publication GitHub et Workshop demandée par le créateur le 2026-10-30. Licence
 
 ### Mise à jour 0.3.2
 
-Le 2026-10-30, le créateur a confirmé « Tests OK », puis « Workshop à jour » pour le correctif des opérations médicales. La mise à jour de l’article existant `3830142536` est donc consignée comme confirmée par le créateur. Le téléchargement 0.3.2 et la visibilité actuelle n’ont pas été revérifiés indépendamment ; la consigne de visibilité privée reste applicable. La dernière vérification du téléchargement porte sur 0.3.1, de même que la dernière release GitHub recensée ci-dessous.
+Le 2026-10-30, le créateur a confirmé « Tests OK », puis « Workshop à jour » pour le correctif des opérations médicales. La mise à jour de l’article existant `3830142536` est donc consignée comme confirmée par le créateur. Le téléchargement Workshop 0.3.2 et la visibilité actuelle n’ont pas été revérifiés indépendamment ; la consigne de visibilité privée reste applicable. La dernière vérification du téléchargement Workshop porte sur 0.3.1.
+
+La [release GitHub 0.3.2](https://github.com/Diablood/Workshop-Filter/releases/tag/v0.3.2) est publiée à la demande du créateur, avec le tag `v0.3.2` au commit `1bbd4426522ce6d0a9daa5fd994084c49e348655`. La compilation et les 50 contrôles ont réussi ; `LayoutChecks` n’a pas été lancé. L’archive conserve la DLL validée, enregistrée dans ce commit. Les trois pièces jointes (ZIP, manifeste et sommes de contrôle) ont été retéléchargées ; les 14 fichiers du ZIP ont été vérifiés contre le manifeste, ainsi que le commit du tag distant. SHA-256 du ZIP : `11a23ae2d71de154a492d1e19505b90be4dd3f1c7f4428cb7683193ca12b62e6`. Les anciennes releases et leurs tags sont conservés.
 
 ### Publication 0.3.1 vérifiée
 
@@ -29,11 +31,11 @@ La DLL envoyée a été recompilée par le créateur après le tag GitHub : sa v
 - Métadonnées et suivi : `listing.json`.
 - Licence du code : `LICENSE` ; traitement distinct des visuels : `LICENSING.md`.
 
-`tools/prepare-release.ps1` compile et vérifie, puis crée une archive et un dossier de contenu propre dans `artifacts/releases/0.3.1/<horodatage>/`. Il ne publie rien. Les sources, outils, décompilations, bibliothèques du jeu et d'autres mods ne font pas partie de l'envoi. `manifest.json` conserve les SHA-256 et reste en dehors du dossier du mod.
+`tools/prepare-release.ps1` compile et vérifie, puis crée une archive et un dossier de contenu propre dans `artifacts/releases/<version>/<horodatage>/`. Il ne publie rien. Les sources, outils, décompilations, bibliothèques du jeu et d'autres mods ne font pas partie de l'envoi. `manifest.json` conserve les SHA-256 et reste en dehors du dossier du mod.
 
 ## GitHub
 
-Déposer les sources et fichiers nécessaires du projet dans https://github.com/Diablood/Workshop-Filter, puis créer le tag `v0.3.1` et une release avec l'archive préparée et ses sommes de contrôle. Vérifier le commit distant et le contenu téléchargé. Conserver la release 0.3.0 existante comme historique.
+Déposer les sources et fichiers nécessaires du projet dans https://github.com/Diablood/Workshop-Filter, puis créer le tag de la nouvelle version et une release avec l'archive préparée et ses sommes de contrôle. Vérifier le commit distant et le contenu téléchargé. Conserver la release 0.3.0 existante comme historique.
 
 ## Steam Workshop
 
@@ -45,3 +47,4 @@ Déposer les sources et fichiers nécessaires du projet dans https://github.com/
 6. Vérifier le contenu distribué et sa version après téléchargement. Éviter l'activation simultanée des copies locale et Workshop.
 
 La procédure de l'installation locale a été inspectée : l'uploader utilise `About/Preview.png` et le dossier racine du mod. Le contenu autorisé est défini dans `tools/package-files.json`, avec `About/PublishedFileId.txt` ajouté lorsqu'il existe. L'aperçu est exporté sous 1 Mo, conformément à la documentation Steamworks. Le suivi doit distinguer publication GitHub, envoi Workshop et vérification du téléchargement.
+
