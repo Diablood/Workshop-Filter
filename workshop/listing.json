@@ -11,9 +11,9 @@
   "gameGeneratedTags": ["Mod", "1.7"],
   "publishedFileId": null,
   "workshopUrl": null,
-  "status": "preparing-0.3.1-awaiting-creator-workshop-upload",
-  "githubReleaseUrl": null,
-  "githubReleaseCommit": null,
-  "githubArchiveVerified": false,
+  "status": "github-published-awaiting-creator-workshop-upload",
+  "githubReleaseUrl": "https://github.com/Diablood/Workshop-Filter/releases/tag/v0.3.1",
+  "githubReleaseCommit": "8f3857d5dfc66f3fd3fe0039388813a2ef658b9f",
+  "githubArchiveVerified": true,
   "localizedDescriptions": ["english", "french"]
 }

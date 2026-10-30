@@ -4,9 +4,11 @@ Publication GitHub et Workshop demandée par le créateur le 2026-10-30. Licence
 
 ## État de publication
 
-Correctif 0.3.1 en préparation à la demande du créateur pour utiliser `diablood.workshopfilter`. Le créateur a fermé le jeu pour permettre le redéploiement. L’article Workshop, s’il a déjà été créé, devra être réutilisé ; aucun deuxième article ne doit être créé.
+Correctif [0.3.1 publié sur GitHub](https://github.com/Diablood/Workshop-Filter/releases/tag/v0.3.1), commit du tag `8f3857d5dfc66f3fd3fe0039388813a2ef658b9f`, à la demande du créateur pour utiliser `diablood.workshopfilter`. L’archive publique a été retéléchargée : ses 12 fichiers et l’installation locale sont identiques au manifeste. SHA-256 : `0eb6705e705b781db68bfa092a44d7065ff0ab9c5a37a130a6db1d6ab614b06b`.
 
-GitHub : sources et [release v0.3.0](https://github.com/Diablood/Workshop-Filter/releases/tag/v0.3.0) publiées. Le tag pointe vers `d48ba59cc46c00a27fda99d8944b7fa0fd53b1f4`, avec l’auteur **Diablood**. L’archive publique a été retéléchargée et ses 12 fichiers vérifiés contre le manifeste. SHA-256 : `7c2404ba73349d1cd9f534ab4e34076173645f222f82e86bb4c8ba7f007c4988`.
+Le créateur a fermé le jeu pour permettre le redéploiement de 0.3.1. L’entrée de ce mod dans le fichier ModsConfig.xml actif a été migrée vers le nouvel identifiant après sauvegarde de l’original dans artifacts/backups. Aucun identifiant Workshop n’existait encore lors de ce redéploiement. L’article Workshop, s’il est créé ensuite, devra être réutilisé ; aucun deuxième article ne doit être créé.
+
+Historique GitHub : la [release v0.3.0](https://github.com/Diablood/Workshop-Filter/releases/tag/v0.3.0) reste conservée avec son ancien package ID. Son tag pointe vers `d48ba59cc46c00a27fda99d8944b7fa0fd53b1f4`. Sa vérification initiale portait sur 12 fichiers, SHA-256 `7c2404ba73349d1cd9f534ab4e34076173645f222f82e86bb4c8ba7f007c4988`. Utiliser désormais 0.3.1.
 
 Workshop : le créateur a choisi d’effectuer lui-même le premier envoi et de fournir le lien. Attendre ce lien pour renseigner l’identifiant et vérifier la page ; ne pas déclencher un deuxième envoi depuis l’agent. Les textes FR/EN sont prêts. L’icône personnelle `About/ModIcon.png` est conservée sans modification et incluse dans la distribution.
 
