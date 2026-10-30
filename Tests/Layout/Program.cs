@@ -1,0 +1,31 @@
+using System.Reflection;
+using System.Reflection.Emit;
+using HarmonyLib;
+using RimWorld;
+using WorkshopFilter;
+
+int checks = 0;
+void Check(bool value, string message) { if (!value) throw new Exception(message); checks++; }
+var flags = BindingFlags.NonPublic | BindingFlags.Static;
+var patch = typeof(WorkshopFilterMod).Assembly.GetType("WorkshopFilter.BillListingPatch", true)!;
+var compatibility = typeof(WorkshopFilterMod).Assembly.GetType("WorkshopFilter.DubsMintMenusCompatibility", true)!;
+var header = patch.GetMethod("HeaderHeight", flags)!;
+var transpiler = patch.GetMethod("Transpiler", flags)!;
+var original = PatchProcessor.GetOriginalInstructions(typeof(BillStack).GetMethod("DoListing")!);
+Check(original.Count(c => c.opcode == OpCodes.Ldc_R4 && c.operand is float f && f == 35f) == 2, "Native viewport contract");
+var transformed = ((IEnumerable<CodeInstruction>)transpiler.Invoke(null, [original])!).ToList();
+Check(transformed.Count(c => c.opcode == OpCodes.Call && Equals(c.operand, header)) == 2, "Both viewport offsets must be adjusted");
+Check(!transformed.Any(c => c.opcode == OpCodes.Ldc_R4 && c.operand is float f && f == 35f), "No old viewport offset remains");
+Check((bool)patch.GetField("layoutReady", flags)!.GetValue(null)!, "Layout must be enabled on installed game");
+var stack = new BillStack(null!);
+Check((float)header.Invoke(null, [stack])! == 69f, "Vanilla filter gets its own row");
+compatibility.GetField("renderedPanels", flags)!.SetValue(null, new HashSet<BillStack> { stack });
+Check((float)header.Invoke(null, [stack])! == 35f, "Dubs panel suppresses extra native row");
+compatibility.GetMethod("BeginListing", flags)!.Invoke(null, null);
+Check((float)header.Invoke(null, [stack])! == 69f, "Native row returns when Dubs does not draw");
+for (int i = 0; i < BillStack.MaxCount; i++) stack.Bills.Add(null!);
+Check((float)header.Invoke(null, [stack])! == 35f, "Full stack does not waste a filter row");
+var optionalHarmony = new Harmony("diabl.workshopfilter.layoutchecks");
+compatibility.GetMethod("Install", flags)!.Invoke(null, [optionalHarmony]);
+Check(!optionalHarmony.GetPatchedMethods().Any(), "Absent Dubs must not install any optional patch");
+Console.WriteLine($"{checks} layout and optional-mod checks passed against the installed RimWorld assembly. No game UI was executed.");

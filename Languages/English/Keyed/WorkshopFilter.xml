@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <WF_Filter>Filter products</WF_Filter>
+  <WF_FilterActive>Filters active</WF_FilterActive>
+  <WF_Tooltip>Filter final products in the Add bill list by source mod and, for apparel, by layer and nudist compatibility.</WF_Tooltip>
+  <WF_Title>Workshop product filters</WF_Title>
+  <WF_Explanation>Choose the final product’s source mod, apparel layer or nudist compatibility. Filters apply together.</WF_Explanation>
+  <WF_ExplanationModOnly>Choose the source mod of this workshop’s final products.</WF_ExplanationModOnly>
+  <WF_Mod>Mod</WF_Mod>
+  <WF_Layer>Layer</WF_Layer>
+  <WF_Nudist>Nudist compatible</WF_Nudist>
+  <WF_NudistTip>Checked: only show apparel compatible with nudity under the game’s rules (it does not count as clothing for nudity, or covers neither torso nor legs). Unchecked: no nudity restriction.</WF_NudistTip>
+  <WF_AllMods>All mods</WF_AllMods>
+  <WF_AllLayers>All layers</WF_AllLayers>
+  <WF_Count>{0} researched recipe(s) match the filters.</WF_Count>
+  <WF_Reset>Reset</WF_Reset>
+  <WF_ChooseMod>Choose a mod</WF_ChooseMod>
+  <WF_ChooseLayer>Choose a layer</WF_ChooseLayer>
+  <WF_Search>Search</WF_Search>
+  <WF_NoResults>No results.</WF_NoResults>
+  <WF_NoActiveFilters>No active filters.</WF_NoActiveFilters>
+  <WF_SelectedTables>{0} workshops selected.</WF_SelectedTables>
+  <WF_Mixed>Varies by workshop</WF_Mixed>
+</LanguageData>

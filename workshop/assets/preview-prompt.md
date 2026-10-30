@@ -1,0 +1,9 @@
+# Cover provenance
+
+Created with the built-in ImageGen tool on 2026-10-30. The first illustrated concept was restyled at the creator's request to use a more cartoon look inspired by RimWorld's readable 2D objects. No official logo or game screenshot was used.
+
+Final edit prompt:
+
+> Redesign this Steam Workshop cover in a much more cartoon, flat 2D colony-game aesthetic inspired by RimWorld's simple readable top-down objects. The reference is the edit target, retain the concept and exact title WORKSHOP FILTER and the 1.7 badge. Completely remove the realistic lighting, photographic textures and intricate painterly machinery. Use thick dark outlines, simple rounded geometric shapes, flat muted colors, very limited two-tone cel shading, clean icon-like cartoon tailoring workbench and a stylized funnel sorter. No gradients or detailed textures. Orthographic or shallow top-down composition, like a polished hand-drawn mod icon for a colony simulator. Dark charcoal blue background, warm tan workbench, teal and ochre accents. Big cream block title WORKSHOP on line 1, FILTER on line 2, crisp and legible. Under the title three simple large flat pictograms (mod box with puzzle-piece marking, folded shirt with layer strips, leaf) flow through a single simple funnel to a tray of neatly sorted folded clothes. Keep only a few oversized surrounding props, such as scissors and two folded jackets, to avoid visual clutter. This must look like a playful vector-like cartoon illustration, not 3D, not realistic, not cinematic. No people, no official logo, no extra text except WORKSHOP FILTER and 1.7. Square cover, important artwork within safe margins.
+
+The full generated image is `preview-master-cartoon.png`. `About/Preview.png` is a 640 × 640 PNG export for Steam's preview size limit. See `LICENSING.md` for the separate treatment of artwork.

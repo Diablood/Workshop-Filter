@@ -1,0 +1,35 @@
+[h1]Find the recipe you want to craft[/h1]
+Workshop Filter adds filters to your workshop recipe list so large mod lists are easier to navigate. The filters apply to final products, not ingredients or bills already in progress.
+
+[h2]Filters that work together[/h2]
+[list]
+[*]Source mod: show products from a specific mod, Core or DLC.
+[*]Apparel layer: select vanilla or custom layers discovered from the workshop's recipes. This control only appears when the workshop can produce apparel.
+[*]Nudist compatible: one checkbox using RimWorld's nudity rule, including eligible headgear and accessories. Unchecked applies no nudity restriction.
+[*]All active criteria must match the same final product, including recipes with multiple outputs.
+[/list]
+
+[h2]Made for everyday use[/h2]
+[list]
+[*]Search mod and layer lists by name or identifier, ignoring case and accents.
+[*]Filters are saved separately for each workshop and restored when you load your game.
+[*]Hover over the button to see the active criteria.
+[*]Reset in one click, or close the window by clicking outside it.
+[*]English and French interface.
+[/list]
+
+[h2]Dubs Mint Menus support[/h2]
+Works with the native Add bill menu and the recipe panels of Dubs Mint Menus, including its multi-workshop window. Dubs Mint Menus is optional: the mod works without it. When its recipe panel is visible, only the Dubs filter button is displayed.
+
+[h2]Requirements and compatibility[/h2]
+RimWorld 1.7 and Harmony are required. Core and DLC are shown as separate product sources. No DLC is required by Workshop Filter itself.
+
+Other mods replacing the bill interface may need an adapter. Recipes that generate outputs only through a custom worker without declared recipe products cannot be classified. Filter choices affect only the displayed recipe list; they do not change crafting requirements, ingredient filters or existing bills.
+
+[h2]Saves and feedback[/h2]
+Existing saves start without filters. New selections are stored in the save. A removed source mod or apparel layer has its corresponding criterion cleared on load. Version 0.3.0 received user-reported in-game validation; full-game removal and downgrading have not received dedicated tests.
+
+Please include game/mod versions, the workshop, selected filters, relevant interface mods, steps and a relevant log excerpt in bug reports.
+
+Code is MIT licensed. The cartoon cover is AI-generated promotional artwork, not an in-game screenshot; image licensing is separate.
+[url=https://github.com/Diablood/Workshop-Filter]Source and issue tracker[/url]

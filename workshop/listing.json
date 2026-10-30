@@ -1,0 +1,16 @@
+{
+  "title": "Workshop Filter",
+  "version": "0.3.0",
+  "authorDisplayName": "Diablood",
+  "appId": 294100,
+  "packageId": "diabl.workshopfilter",
+  "repository": "https://github.com/Diablood/Workshop-Filter",
+  "gitTag": "v0.3.0",
+  "requiredWorkshopItems": [2009463077],
+  "optionalWorkshopItems": [1446523594],
+  "gameGeneratedTags": ["Mod", "1.7"],
+  "publishedFileId": null,
+  "workshopUrl": null,
+  "status": "prepared",
+  "localizedDescriptions": ["english", "french"]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Workshop Filter</name>
+  <author>Diabl</author>
+  <packageId>diabl.workshopfilter</packageId>
+  <modVersion>0.3.0</modVersion>
+  <url>https://github.com/Diablood/Workshop-Filter</url>
+  <supportedVersions><li>1.7</li></supportedVersions>
+  <modDependencies>
+    <li><packageId>brrainz.harmony</packageId><displayName>Harmony</displayName><steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl></li>
+  </modDependencies>
+  <loadAfter><li>brrainz.harmony</li></loadAfter>
+  <description>Filter workshop recipes by the mod providing their final products and by apparel layer, including layers added by mods.</description>
+</ModMetaData>

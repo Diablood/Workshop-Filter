@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <WF_Filter>Filtrer les produits</WF_Filter>
+  <WF_FilterActive>Filtres actifs</WF_FilterActive>
+  <WF_Tooltip>Filtrer les produits finaux de la liste « Ajouter une tâche » par mod et, pour les vêtements, par couche et compatibilité nudiste.</WF_Tooltip>
+  <WF_Title>Filtres des produits de l’atelier</WF_Title>
+  <WF_Explanation>Choisissez le mod du produit final, sa couche ou sa compatibilité nudiste. Les critères se combinent.</WF_Explanation>
+  <WF_ExplanationModOnly>Choisissez le mod d’origine des produits finaux de cet atelier.</WF_ExplanationModOnly>
+  <WF_Mod>Mod</WF_Mod>
+  <WF_Layer>Couche</WF_Layer>
+  <WF_Nudist>Compatible nudiste</WF_Nudist>
+  <WF_NudistTip>Coché : afficher uniquement les vêtements compatibles avec la nudité selon les règles du jeu (ils ne comptent pas comme vêtements pour la nudité, ou ne couvrent ni le torse ni les jambes). Décoché : aucune restriction liée à la nudité.</WF_NudistTip>
+  <WF_AllMods>Tous les mods</WF_AllMods>
+  <WF_AllLayers>Toutes les couches</WF_AllLayers>
+  <WF_Count>{0} recette(s) recherchée(s) correspondant aux filtres.</WF_Count>
+  <WF_Reset>Réinitialiser</WF_Reset>
+  <WF_ChooseMod>Choisir un mod</WF_ChooseMod>
+  <WF_ChooseLayer>Choisir une couche</WF_ChooseLayer>
+  <WF_Search>Rechercher</WF_Search>
+  <WF_NoResults>Aucun résultat.</WF_NoResults>
+  <WF_NoActiveFilters>Aucun filtre actif.</WF_NoActiveFilters>
+  <WF_SelectedTables>{0} ateliers sélectionnés.</WF_SelectedTables>
+  <WF_Mixed>Différent selon l’atelier</WF_Mixed>
+</LanguageData>

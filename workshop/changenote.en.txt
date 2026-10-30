@@ -1,0 +1,2 @@
+First publication — Workshop Filter 0.3.0 for RimWorld 1.7.
+Filter final workshop products by source mod, apparel layer and nudist compatibility. Saved selections per workshop, searchable mod/layer lists, active-filter summaries and optional Dubs Mint Menus support. English and French interface. Requires Harmony.

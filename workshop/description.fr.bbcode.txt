@@ -1,0 +1,35 @@
+[h1]Retrouvez les recettes que vous voulez fabriquer[/h1]
+Workshop Filter ajoute des filtres aux recettes de vos ateliers pour faciliter la navigation dans les grandes listes de mods. Les critères portent sur les produits finaux, pas sur les ingrédients ni sur les tâches déjà créées.
+
+[h2]Des filtres combinables[/h2]
+[list]
+[*]Mod d'origine : afficher les produits d'un mod précis, du jeu de base ou d'un DLC.
+[*]Couche de vêtement : choisir une couche vanilla ou custom, détectée dans les recettes de l'atelier. Ce bouton apparaît uniquement si l'atelier produit des vêtements.
+[*]Compatible nudiste : une case unique utilisant la règle de nudité du jeu, avec les couvre-chefs et accessoires compatibles. Décochée, elle n'applique aucune restriction de nudité.
+[*]Tous les critères actifs doivent correspondre au même produit final, y compris pour les recettes à plusieurs produits.
+[/list]
+
+[h2]Pratique au quotidien[/h2]
+[list]
+[*]Rechercher un mod ou une couche par nom ou identifiant, sans distinction de casse ni d'accent.
+[*]Conserver les sélections de chaque atelier dans la sauvegarde et les retrouver au chargement.
+[*]Voir les critères actifs au survol du bouton.
+[*]Tout réinitialiser en un clic et fermer la fenêtre en cliquant à l'extérieur.
+[*]Interface française et anglaise.
+[/list]
+
+[h2]Compatibilité Dubs Mint Menus[/h2]
+Fonctionne avec le menu natif d'ajout de tâche et les panneaux de recettes de Dubs Mint Menus, dont sa fenêtre multi-ateliers. Dubs Mint Menus reste facultatif. Lorsque son panneau est visible, seul son bouton de filtre est affiché.
+
+[h2]Prérequis et compatibilité[/h2]
+RimWorld 1.7 et Harmony sont requis. Le jeu de base et les DLC sont proposés comme sources distinctes. Workshop Filter ne nécessite lui-même aucun DLC.
+
+Les autres mods remplaçant entièrement l'interface des tâches peuvent nécessiter une adaptation. Les recettes générant leurs produits uniquement par un worker custom, sans produits déclarés, ne peuvent pas être classées. Les filtres modifient seulement la liste affichée, pas les exigences de fabrication, les ingrédients ni les tâches existantes.
+
+[h2]Sauvegardes et retours[/h2]
+Les anciennes sauvegardes commencent sans filtre. Les nouvelles sélections sont enregistrées dans la partie. Un mod d'origine ou une couche disparus voient leur critère effacé au chargement. La version 0.3.0 a reçu une validation en jeu de l'utilisateur ; le retrait du mod et le retour à une ancienne version n'ont pas reçu de test de partie complet dédié.
+
+Pour un bug, indiquez les versions du jeu et du mod, l'atelier, les filtres, les mods d'interface concernés, les étapes et un extrait pertinent du journal.
+
+Code sous licence MIT. La couverture cartoon est une illustration promotionnelle générée par IA, pas une capture du jeu ; la licence des images est distincte.
+[url=https://github.com/Diablood/Workshop-Filter]Sources et signalement de bugs[/url]
