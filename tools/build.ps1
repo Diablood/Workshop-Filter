@@ -5,7 +5,8 @@ param(
     [switch]$RunLayoutChecks
 )
 $ErrorActionPreference = 'Stop'
-Push-Location $PSScriptRoot
+$projectRoot = Split-Path -Parent $PSScriptRoot
+Push-Location $projectRoot
 try {
     & dotnet build Source/WorkshopFilter/WorkshopFilter.csproj -c Release "-p:RimWorldDir=$RimWorldDir" "-p:HarmonyAssemblyPath=$HarmonyAssemblyPath" --nologo
     if ($LASTEXITCODE -ne 0) { throw 'Build failed.' }
@@ -17,5 +18,5 @@ try {
         & dotnet run --project Tests/Layout/LayoutChecks.csproj -c Release "-p:RimWorldDir=$RimWorldDir" "-p:HarmonyAssemblyPath=$HarmonyAssemblyPath"
         if ($LASTEXITCODE -ne 0) { throw 'Layout checks failed.' }
     }
-    & ./tools/check-project.ps1 -RimWorldDir $RimWorldDir -HarmonyAssemblyPath $HarmonyAssemblyPath
+    & (Join-Path $PSScriptRoot 'check-project.ps1') -RimWorldDir $RimWorldDir -HarmonyAssemblyPath $HarmonyAssemblyPath
 } finally { Pop-Location }

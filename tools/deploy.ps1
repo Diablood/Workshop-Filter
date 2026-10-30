@@ -4,7 +4,7 @@ param(
     [string]$HarmonyAssemblyPath = 'D:\SteamLibrary\steamapps\workshop\content\294100\2009463077\1.7\Assemblies\0Harmony.dll'
 )
 $ErrorActionPreference = 'Stop'
-$projectRoot = $PSScriptRoot
+$projectRoot = Split-Path -Parent $PSScriptRoot
 $gameRoot = (Resolve-Path -LiteralPath $RimWorldDir).ProviderPath
 if (-not (Test-Path -LiteralPath (Join-Path $gameRoot 'Assembly-CSharp.dll') -PathType Leaf)) {
     throw 'RimWorldDir must point to the RimWorld 1.7 installation.'
@@ -46,10 +46,10 @@ if (-not $PSCmdlet.ShouldProcess($destination, 'Build, validate and deploy Works
     return
 }
 if (Get-Process -Name RimWorld -ErrorAction SilentlyContinue) {
-    throw 'Close RimWorld before deploying, then run deploy.ps1 again.'
+    throw 'Close RimWorld before deploying, then run tools/deploy.cmd again.'
 }
 
-& (Join-Path $projectRoot 'build.ps1') -RimWorldDir $gameRoot -HarmonyAssemblyPath $HarmonyAssemblyPath
+& (Join-Path $PSScriptRoot 'build.ps1') -RimWorldDir $gameRoot -HarmonyAssemblyPath $HarmonyAssemblyPath
 
 $runId = (Get-Date -Format 'yyyyMMdd-HHmmss') + '-' + [Guid]::NewGuid().ToString('N').Substring(0, 8)
 $stage = Join-Path $projectRoot "artifacts\deploy\$runId\WorkshopFilter"
@@ -95,7 +95,7 @@ if (Test-Path -LiteralPath $destination) {
 }
 New-Item -ItemType Directory -Path $modsRoot -Force | Out-Null
 if (Get-Process -Name RimWorld -ErrorAction SilentlyContinue) {
-    throw 'RimWorld was started during the build. Close it and run deploy.ps1 again.'
+    throw 'RimWorld was started during the build. Close it and run tools/deploy.cmd again.'
 }
 try {
     Assert-SafeDestination

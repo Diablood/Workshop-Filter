@@ -33,7 +33,7 @@ User-reported in-game checks passed for 0.3.0. Automated checks cover filtering,
 
 ## Development and feedback
 
-Build requires .NET 10, a local RimWorld 1.7 installation and the installed Harmony assembly. Paths are configurable in `build.ps1`; `deploy.cmd` builds, checks and installs a clean local copy. `prepare-release.ps1` prepares the distribution archive and Workshop content without uploading them. `LayoutChecks` runs only when explicitly requested.
+Build requires .NET 10, a local RimWorld 1.7 installation and the installed Harmony assembly. All scripts live in `tools/`: `tools/build.ps1` builds and checks, `tools/deploy.cmd` installs a clean local copy, and `tools/prepare-release.ps1` prepares the distribution archive and Workshop content without uploading them. Scripts resolve project paths from their own location and work from other working directories. `LayoutChecks` runs only when explicitly requested.
 
 For a bug report, include the game/mod versions, affected workshop, selected filters, relevant interface mods, reproduction steps and a relevant log excerpt.
 

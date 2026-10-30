@@ -26,16 +26,16 @@ Un clic à l’extérieur ferme la fenêtre des filtres. Les sélections s’app
 Fermer RimWorld, puis exécuter :
 
 ```powershell
-.\deploy.cmd
+.\tools\deploy.cmd
 ```
 
 Le lanceur utilise PowerShell 7 (installé ou fourni avec Codex) et autorise les scripts uniquement pour ce processus, sans modifier la stratégie d’exécution permanente de Windows. Il fonctionne depuis Windows PowerShell ou une invite de commandes.
 
-Cette commande compile, exécute les contrôles puis installe le mod dans `D:\SteamLibrary\steamapps\common\RimWorld\Mods\WorkshopFilter`. Les chemins sont configurables avec `-RimWorldDir` et `-HarmonyAssemblyPath`, comme pour `build.ps1`. `.\deploy.cmd -WhatIf` affiche la destination sans compiler ni copier. `deploy.ps1` reste utilisable directement dans un PowerShell autorisant les scripts.
+Cette commande compile, exécute les contrôles puis installe le mod dans `D:\SteamLibrary\steamapps\common\RimWorld\Mods\WorkshopFilter`. Les chemins sont configurables avec `-RimWorldDir` et `-HarmonyAssemblyPath`, comme pour `tools/build.ps1`. `.\tools\deploy.cmd -WhatIf` affiche la destination sans compiler ni copier. `tools/deploy.ps1` reste utilisable directement dans un PowerShell autorisant les scripts. Les scripts calculent les chemins depuis leur emplacement ; ils fonctionnent aussi depuis un autre répertoire de travail.
 
 Seuls les fichiers nécessaires au mod et le README sont copiés. Une installation précédente portant le même packageId est sauvegardée dans `artifacts/backups` avant remplacement ; elle est restaurée si la copie ou sa vérification échoue. Le script vérifie le contenu par SHA-256 et s’arrête si le jeu tourne ou si la destination appartient à un autre mod. Les fichiers obsolètes de l’ancienne installation sont éliminés lors du remplacement.
 
-Activer Harmony, puis Workshop Filter. Dans l’onglet des tâches d’un atelier, ouvrir **Filtrer les produits**, choisir les critères, fermer, puis cliquer **Ajouter une tâche**. Pour compiler sans installer, utiliser `./build.ps1`.
+Activer Harmony, puis Workshop Filter. Dans l’onglet des tâches d’un atelier, ouvrir **Filtrer les produits**, choisir les critères, fermer, puis cliquer **Ajouter une tâche**. Pour compiler sans installer, utiliser `./tools/build.ps1`.
 
 ## Développement
 
@@ -44,7 +44,7 @@ La compilation cible .NET 10 et les assemblies de l’installation locale **1.7.
 La version du mod suit `MAJEURE.MINEURE.CORRECTIF`, distinctement de la version du jeu. `Directory.Build.props` définit la version de la DLL ; `About/About.xml` et `CHANGELOG.md` doivent être mis à jour ensemble lors d’un changement de version. La compilation vérifie leur cohérence. Les premiers essais locaux n’avaient pas de version explicite ; la numérotation débute à 0.1.0.
 
 ```powershell
-./build.ps1 -RimWorldDir 'D:\SteamLibrary\steamapps\common\RimWorld' -HarmonyAssemblyPath 'chemin\1.7\Assemblies\0Harmony.dll'
+./tools/build.ps1 -RimWorldDir 'D:\SteamLibrary\steamapps\common\RimWorld' -HarmonyAssemblyPath 'chemin\1.7\Assemblies\0Harmony.dll'
 ```
 
 Trois patches Harmony : `BillStack.DoListing` ajoute le bouton et enveloppe le générateur natif des options ; `ThingDef.AllRecipes` retourne une copie filtrée uniquement pendant cette génération et pour cet atelier ; `BillStack.ExposeData` sauvegarde les critères sous la clé `workshopFilter` (`modId`, `layer`, `nudistOnly`). La liste globale en cache reste intacte. Le contexte est restauré même en cas d’exception. Les actions natives, styles idéologiques, contrôles de recherche et exigences de fabrication restent pris en charge par le générateur d’origine.
@@ -59,11 +59,11 @@ Compatibilité prévue avec les autres ateliers moddés utilisant `BillStack.DoL
 
 ## Vérification
 
-`build.ps1` compile le mod et exécute 33 contrôles de logique (filtres des produits et recherche textuelle), ainsi que les contrôles de signatures, XML, traductions et versions. Le déploiement habituel ne compile ni ne lance `LayoutChecks` : son lancement déclenche une analyse antivirus audible sur cette machine.
+`tools/build.ps1` compile le mod et exécute 33 contrôles de logique (filtres des produits et recherche textuelle), ainsi que les contrôles de signatures, XML, traductions et versions. Le déploiement habituel ne compile ni ne lance `LayoutChecks` : son lancement déclenche une analyse antivirus audible sur cette machine.
 
 `./tools/check-save-roundtrip.ps1` effectue séparément 9 contrôles de sauvegarde/rechargement avec le sérialiseur Scribe du jeu installé, depuis PowerShell sans créer ni lancer d’exécutable de test. Les fichiers XML synthétiques sont écrits dans `artifacts/save-check`, sans toucher aux parties ni à la configuration du joueur. Ces contrôles ont réussi pour 0.3.0 ; ils ne remplacent pas un test de partie complète en jeu.
 
-Les 9 contrôles supplémentaires de mise en page et de chargement sans Dubs restent disponibles uniquement sur demande explicite avec `./build.ps1 -RunLayoutChecks`. Ils vérifient la transformation des deux décalages du panneau natif sur l’assembly du jeu installé, l’espace réservé au filtre et son retrait lorsque Dubs dessine son panneau. Aucun rendu du jeu n’est exécuté : cela ne remplace pas une vérification visuelle en jeu.
+Les 9 contrôles supplémentaires de mise en page et de chargement sans Dubs restent disponibles uniquement sur demande explicite avec `./tools/build.ps1 -RunLayoutChecks`. Ils vérifient la transformation des deux décalages du panneau natif sur l’assembly du jeu installé, l’espace réservé au filtre et son retrait lorsque Dubs dessine son panneau. Aucun rendu du jeu n’est exécuté : cela ne remplace pas une vérification visuelle en jeu.
 
 Parcours manuel :
 

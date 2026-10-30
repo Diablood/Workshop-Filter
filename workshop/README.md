@@ -23,7 +23,7 @@ La DLL envoyée a été recompilée par le créateur après le tag GitHub : sa v
 - Métadonnées et suivi : `listing.json`.
 - Licence du code : `LICENSE` ; traitement distinct des visuels : `LICENSING.md`.
 
-`prepare-release.ps1` compile et vérifie, puis crée une archive et un dossier de contenu propre dans `artifacts/releases/0.3.1/<horodatage>/`. Il ne publie rien. Les sources, outils, décompilations, bibliothèques du jeu et d'autres mods ne font pas partie de l'envoi. `manifest.json` conserve les SHA-256 et reste en dehors du dossier du mod.
+`tools/prepare-release.ps1` compile et vérifie, puis crée une archive et un dossier de contenu propre dans `artifacts/releases/0.3.1/<horodatage>/`. Il ne publie rien. Les sources, outils, décompilations, bibliothèques du jeu et d'autres mods ne font pas partie de l'envoi. `manifest.json` conserve les SHA-256 et reste en dehors du dossier du mod.
 
 ## GitHub
 
@@ -31,7 +31,7 @@ Déposer les sources et fichiers nécessaires du projet dans https://github.com/
 
 ## Steam Workshop
 
-1. Déployer le contenu propre dans `RimWorld/Mods/WorkshopFilter`, jeu fermé, avec `deploy.cmd`.
+1. Déployer le contenu propre dans `RimWorld/Mods/WorkshopFilter`, jeu fermé, avec `tools/deploy.cmd`.
 2. Depuis la liste des mods de RimWorld, sélectionner Workshop Filter et utiliser l'action d'envoi Steam Workshop. La confirmation d'envoi transfère le contenu du dossier du mod : vérifier qu'il ne contient que le manifeste autorisé.
 3. Toute acceptation d'accord Steam demandée reste à effectuer par le titulaire du compte.
 4. Récupérer `About/PublishedFileId.txt`, reporter cet identifiant dans les sources et `listing.json`, puis réutiliser cet article pour les mises à jour.

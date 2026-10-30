@@ -7,7 +7,7 @@ set "WorkshopFilterPowerShell=%ProgramFiles%\PowerShell\7\pwsh.exe"
 if exist "%WorkshopFilterPowerShell%" goto run
 set "WorkshopFilterPowerShell=%USERPROFILE%\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.exe"
 if exist "%WorkshopFilterPowerShell%" goto run
-echo PowerShell 7 is required. Install it, then run deploy.cmd again. 1>&2
+echo PowerShell 7 is required. Install it, then run tools\deploy.cmd again. 1>&2
 exit /b 1
 
 :run

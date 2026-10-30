@@ -5,9 +5,9 @@ param(
     [string]$HarmonyAssemblyPath = 'D:\SteamLibrary\steamapps\workshop\content\294100\2009463077\1.7\Assemblies\0Harmony.dll'
 )
 $ErrorActionPreference = 'Stop'
-$root = $PSScriptRoot
-if (-not $SkipBuild) { & (Join-Path $root 'build.ps1') -RimWorldDir $RimWorldDir -HarmonyAssemblyPath $HarmonyAssemblyPath }
-else { & (Join-Path $root 'tools/check-project.ps1') -RimWorldDir $RimWorldDir -HarmonyAssemblyPath $HarmonyAssemblyPath }
+$root = Split-Path -Parent $PSScriptRoot
+if (-not $SkipBuild) { & (Join-Path $PSScriptRoot 'build.ps1') -RimWorldDir $RimWorldDir -HarmonyAssemblyPath $HarmonyAssemblyPath }
+else { & (Join-Path $PSScriptRoot 'check-project.ps1') -RimWorldDir $RimWorldDir -HarmonyAssemblyPath $HarmonyAssemblyPath }
 [xml]$about = Get-Content -LiteralPath (Join-Path $root 'About/About.xml') -Raw
 $version = [string]$about.ModMetaData.modVersion
 if ($version -notmatch '^\d+\.\d+\.\d+$') { throw 'Invalid release version.' }
