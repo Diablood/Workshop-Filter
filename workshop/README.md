@@ -1,8 +1,14 @@
-# Publication — Workshop Filter 0.3.1
+# Publication — Workshop Filter
 
 Publication GitHub et Workshop demandée par le créateur le 2026-10-30. Licence MIT choisie pour le code ; couverture cartoon demandée. La version 0.3.0 a reçu un retour utilisateur « Tests OK ». Les scénarios détaillés ne sont pas connus ; les vérifications automatiques sont décrites dans le README principal.
 
 ## État de publication
+
+### Mise à jour 0.3.2
+
+Le 2026-10-30, le créateur a confirmé « Tests OK », puis « Workshop à jour » pour le correctif des opérations médicales. La mise à jour de l’article existant `3830142536` est donc consignée comme confirmée par le créateur. Le téléchargement 0.3.2 et la visibilité actuelle n’ont pas été revérifiés indépendamment ; la consigne de visibilité privée reste applicable. La dernière vérification du téléchargement porte sur 0.3.1, de même que la dernière release GitHub recensée ci-dessous.
+
+### Publication 0.3.1 vérifiée
 
 Correctif [0.3.1 publié sur GitHub](https://github.com/Diablood/Workshop-Filter/releases/tag/v0.3.1), commit du tag `8f3857d5dfc66f3fd3fe0039388813a2ef658b9f`, à la demande du créateur pour utiliser `diablood.workshopfilter`. L’archive publique a été retéléchargée : ses 12 fichiers et l’installation locale sont identiques au manifeste. SHA-256 : `0eb6705e705b781db68bfa092a44d7065ff0ab9c5a37a130a6db1d6ab614b06b`.
 
