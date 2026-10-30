@@ -5,7 +5,7 @@
 - Les filtres de produits sont réservés aux bâtiments proposant des tâches de production. Ils n’apparaissent plus dans Santé → Opérations des colons.
 - Les opérations conservent leur liste complète et leur disposition d’origine, même si un ancien filtre médical a été sauvegardé. Les ateliers de mods restent pris en charge sans dépendre d’une classe d’établi particulière ; l’intégration Dubs reste facultative.
 
-Validation : compilation sans erreur ni avertissement, 33 contrôles de filtrage/recherche, 9 contrôles Scribe et 8 contrôles de séparation ateliers/opérations réussis. Signatures, métadonnées, traductions et intégration Dubs facultative vérifiées. `LayoutChecks` n’a pas été lancé. Validation en jeu à effectuer après déploiement : absence du bouton et de ligne vide dans les opérations, puis filtrage d’un atelier, avec et sans Dubs Mint Menus.
+Validation : compilation sans erreur ni avertissement, 33 contrôles de filtrage/recherche, 9 contrôles Scribe et 8 contrôles de séparation ateliers/opérations réussis. Signatures, métadonnées, traductions et intégration Dubs facultative vérifiées. `LayoutChecks` n’a pas été lancé. Le 2026-10-30, le créateur a confirmé « Tests OK » après préparation de la correction 0.3.2. Les scénarios détaillés exécutés et la configuration Dubs n’ont pas été précisés.
 
 ## 0.3.1 — 2026-10-30
 
